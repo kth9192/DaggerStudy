@@ -1,21 +1,16 @@
 package com.noname.daggerexam2.view;
 
+import androidx.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.noname.daggerexam.R;
-import com.noname.daggerexam.databinding.RecyclerItemBinding;
-import com.noname.daggerexam.databinding.RecyclerStarBinding;
-import com.noname.daggerexam.model.People;
-import com.noname.daggerexam.model.StarWars;
-import com.noname.daggerexam.repository.CustomRoom;
-
 import androidx.annotation.NonNull;
-import androidx.databinding.DataBindingUtil;
 import androidx.paging.PagedListAdapter;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
+import com.noname.daggerexam2.R;
+import com.noname.daggerexam2.databinding.RecyclerStarBinding;
+import com.noname.daggerexam2.model.People;
 
 public class StarWarsAdapter extends PagedListAdapter<People, StarWarsAdapter.StarWarsViewHolder> {
 

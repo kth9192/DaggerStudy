@@ -15,5 +15,5 @@ public interface CustomDao {
     void delete(CustomRoom customRoom);
 
     @Query("SELECT * from CustomRoom")
-    List<CustomRoom> getAll();
+    DataSource.Factory<Integer, CustomRoom> getAll();
 }

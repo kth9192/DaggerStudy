@@ -1,9 +1,8 @@
 package com.noname.daggerexam2.daggermanager.modules;
 
-import com.noname.daggerexam.daggermanager.scopes.ActivityScope;
-import com.noname.daggerexam.daggermanager.scopes.ApplicationScope;
-import com.noname.daggerexam.logic.NetworkApi;
 
+import com.noname.daggerexam2.daggermanager.scopes.ApplicationScope;
+import com.noname.daggerexam2.logic.NetworkApi;
 import dagger.Module;
 import dagger.Provides;
 

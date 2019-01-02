@@ -1,7 +1,7 @@
 package com.noname.daggerexam2.view;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
 
 import com.noname.daggerexam2.repository.CustomRoom;
 

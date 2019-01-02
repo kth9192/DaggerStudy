@@ -1,8 +1,8 @@
 package com.noname.daggerexam2.daggermanager.modules;
 
-import com.noname.daggerexam.daggermanager.scopes.ApplicationScope;
-import com.noname.daggerexam.retrofit.APIInterface;
 
+import com.noname.daggerexam2.daggermanager.scopes.ApplicationScope;
+import com.noname.daggerexam2.retrofit.APIInterface;
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;

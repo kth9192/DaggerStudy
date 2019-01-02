@@ -1,28 +1,26 @@
 package com.noname.daggerexam2.daggermanager.modules;
 
 import android.content.Context;
-
-import com.noname.daggerexam2.MainActivity;
+import com.noname.daggerexam2.DetailActivity;
 import com.noname.daggerexam2.daggermanager.qualifier.ActivityContext;
 import com.noname.daggerexam2.daggermanager.scopes.ActivityScope;
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-public class MainActivityContextModule {
-
-    private MainActivity mainActivity;
+public class DetailContextModule {
+    private DetailActivity detailActivity;
     public Context context;
 
-    public MainActivityContextModule(MainActivity mainActivity) {
-        this.mainActivity = mainActivity;
-        context = mainActivity;
+    public DetailContextModule(DetailActivity detailActivity) {
+        this.detailActivity = detailActivity;
+        context = detailActivity;
     }
 
     @Provides
     @ActivityScope
-    public MainActivity providesMainActivity() {
-        return mainActivity;
+    public DetailActivity proviedeDetailAcitivty() {
+        return detailActivity;
     }
 
     @Provides

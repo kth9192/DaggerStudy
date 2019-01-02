@@ -1,6 +1,6 @@
 package com.noname.daggerexam2.view;
 
-import android.databinding.DataBindingUtil;
+import androidx.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +13,11 @@ import com.noname.daggerexam2.R;
 import com.noname.daggerexam2.databinding.RecyclerItemBinding;
 import com.noname.daggerexam2.repository.CustomRoom;
 
+import javax.inject.Inject;
+
 public class CustomAdapter extends PagedListAdapter<CustomRoom, RecyclerView.ViewHolder> {
 
+    @Inject
     public CustomAdapter() {
         super(DIFF_CALLBACK);
     }

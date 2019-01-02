@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData;
 import androidx.paging.DataSource;
 import androidx.paging.LivePagedListBuilder;
 import androidx.paging.PagedList;
-import com.noname.daggerexam2.model.People;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -22,6 +21,7 @@ public class CustomRepo {
         AppDatabase db = AppDatabase.getDatabase(application);
 
         customDao = db.customDao();
+        myDataSource = customDao.getAll();
 
         listLiveData = new LivePagedListBuilder(myDataSource, 20).build();
         executorService = Executors.newSingleThreadExecutor();

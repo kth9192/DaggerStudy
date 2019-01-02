@@ -1,11 +1,14 @@
 package com.noname.daggerexam2;
 
-import android.databinding.DataBindingUtil;
+
+import android.content.Intent;
+import androidx.databinding.DataBindingUtil;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import com.noname.daggerexam2.daggermanager.modules.MainActivityContextModule;
 import com.noname.daggerexam2.databinding.ActivityMainBinding;
 import com.noname.daggerexam2.logic.NetworkApi;
 import com.noname.daggerexam2.repository.CustomRoom;
@@ -33,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     NetworkApi networkApi;
 
     boolean injected = false;
-    boolean clicked = false;
 
     @Inject
     APIInterface apiInterface;
@@ -43,17 +45,18 @@ public class MainActivity extends AppCompatActivity {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
 
-//        networkApi = DaggerLogicComponent.builder().logicModule(new LogicModule(this)).build().getNetworkApi();
         customViewModel = ViewModelProviders.of(this).get(CustomViewModel.class);
         retrofitViewModel = ViewModelProviders.of(this).get(RetrofitViewModel.class);
 
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         injected = networkApi.validateUser("kth", "1111");
 
-        activityMainBinding.target.setText("injected work : " + injected);
+//        activityMainBinding.target.setText("injected work : " + injected);
+//        activityMainBinding.target.setText("context work : " + );
 
         activityMainBinding.btn.setOnClickListener(v -> {
-            clicked = true;
+            Intent intent = new Intent(this, DetailActivity.class);
+            startActivity(intent);
         });
 
 //        CustomViewModel.insert(new CustomRoom(UUID.randomUUID().toString(),"hi"));

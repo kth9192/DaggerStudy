@@ -2,10 +2,9 @@ package com.noname.daggerexam2.daggermanager.modules;
 
 import android.content.Context;
 
-import com.noname.daggerexam.daggermanager.qualifier.ApplicationContext;
-import com.noname.daggerexam.daggermanager.scopes.ApplicationScope;
-import com.noname.daggerexam.logic.NetworkApi;
 
+import com.noname.daggerexam2.daggermanager.qualifier.ApplicationContext;
+import com.noname.daggerexam2.daggermanager.scopes.ApplicationScope;
 import dagger.Module;
 import dagger.Provides;
 
