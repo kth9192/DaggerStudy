@@ -1,7 +1,7 @@
-package com.noname.daggerexam2.daggermanager.modules;
+package com.noname.daggerexam2.daggerpack.modules;
 
 
-import com.noname.daggerexam2.daggermanager.scopes.ActivityScope;
+import com.noname.daggerexam2.daggerpack.scopes.ActivityScope;
 import com.noname.daggerexam2.view.CustomAdapter;
 import dagger.Module;
 import dagger.Provides;

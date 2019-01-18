@@ -1,7 +1,7 @@
-package com.noname.daggerexam2.daggermanager.modules;
+package com.noname.daggerexam2.daggerpack.modules;
 
 
-import com.noname.daggerexam2.daggermanager.scopes.ApplicationScope;
+import com.noname.daggerexam2.daggerpack.scopes.ApplicationScope;
 import com.noname.daggerexam2.retrofit.APIInterface;
 import dagger.Module;
 import dagger.Provides;
@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-public class RetrofitModule {
+public class  RetrofitModule {
 
     @Provides
     @ApplicationScope

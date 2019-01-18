@@ -29,7 +29,6 @@ public class DetailActivity extends AppCompatActivity {
     @Inject
     CustomAdapter customAdapter;
 
-    boolean test = false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         AndroidInjection.inject(this);
@@ -37,10 +36,12 @@ public class DetailActivity extends AppCompatActivity {
         activityDetailBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
         activityDetailBinding.setLifecycleOwner(this);
 
+
         customViewModel = ViewModelProviders.of(this).get(CustomViewModel.class);
         customViewModel.insert(new CustomRoom(UUID.randomUUID().toString(),"bye", String.valueOf(System.currentTimeMillis())));
 
-        test = networkApi.validateUser("kth", "1111");
+        String test = networkApi.getContext().getPackageName();
+//        test = networkApi.validateUser("kth", "1111");
         activityDetailBinding.title.setText(String.valueOf(test));
         activityDetailBinding.recycler.setAdapter(customAdapter);
         activityDetailBinding.recycler.setLayoutManager(new LinearLayoutManager(this));

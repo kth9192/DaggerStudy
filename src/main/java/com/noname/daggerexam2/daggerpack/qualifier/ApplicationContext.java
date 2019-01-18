@@ -1,4 +1,4 @@
-package com.noname.daggerexam2.daggermanager.qualifier;
+package com.noname.daggerexam2.daggerpack.qualifier;
 
 import javax.inject.Qualifier;
 

@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.paging.PagedList;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import com.noname.daggerexam2.daggermanager.modules.MainActivityContextModule;
+import com.noname.daggerexam2.daggerpack.Component.ApplicationComponent;
 import com.noname.daggerexam2.databinding.ActivityMainBinding;
 import com.noname.daggerexam2.logic.NetworkApi;
 import com.noname.daggerexam2.repository.CustomRoom;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         injected = networkApi.validateUser("kth", "1111");
 
 //        activityMainBinding.target.setText("injected work : " + injected);
-//        activityMainBinding.target.setText("context work : " + );
+        activityMainBinding.target.setText("context work : " + networkApi.getContext().getPackageName());
 
         activityMainBinding.btn.setOnClickListener(v -> {
             Intent intent = new Intent(this, DetailActivity.class);

@@ -1,4 +1,4 @@
-package com.noname.daggerexam2.daggermanager.scopes;
+package com.noname.daggerexam2.daggerpack.scopes;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
